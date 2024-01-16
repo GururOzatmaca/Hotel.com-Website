@@ -11,6 +11,8 @@ There are no functions or business logic in html files. One and only script is f
 
 Whenever you click home button you will logout. In the task there was no logout button that is the reason.
 
+In the home page there are cities
+
 You can use this informations to login :
         admin@gmail.com
         Admin.123123
