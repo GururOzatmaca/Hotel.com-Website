@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f1f1f1d7;
+}
+
+
+.mainContent ,header{
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    height: 150px;
+}
+
+nav{
+    position: relative;
+    top:30%;
+}
+
+.mainContent{
+    height: 100vh;
+}
+
+.navbarLeft{
+    position: relative;
+    float :left;
+    left:1%;
+}
+
+.navbarRight{
+    float: right;
+    font-size: 30px;
+}
+
+.navbarRight a{
+    position: relative;
+    text-decoration: none;
+    color: rgb(139, 23, 91);
+    font-size: 25px;
+    font-family: -apple-system,BlinkMacSystemFont,\.SFNSText-Regular,San Francisco,Roboto,Segoe UI Neue,Lucida Grande,sans-serif;
+
+}
+
+a,p, div{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+
+
+.mainBody{
+    padding: 20px;
+    display: flex;
+    border: 1px solid;
+}
+
+.leftPart{
+    flex: 0.8;
+}
+
+.rightPart{
+    flex: 0.7;
+}
+
+.ratingPoint{
+    background-color: #277c1fa6;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+}
+
+.ratingPointclass{
+    margin-bottom: 18px;
+}
+
+.hotelName{
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(63, 123, 180);
+}
+
+.amentities{
+    font-weight: bolder;
+    font-size: 22px;
+    margin: 15px 0px 15px 0px;
+}
+
+ul{
+    list-style: none;
+    margin-bottom: 1%;
+}
+
+
+
+
+li {
+    display: inline-block;
+    width: 33%;
+    margin-bottom: 1%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.newPrice{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.oldPrice{
+    font-size: 18px;
+    text-decoration: line-through;
+}
+
+.nightPrice{
+    margin-top: 1%;
+    font-size: 18px;
+}
+
+.adress{
+    font-size:12px;
+}
+
+iframe{
+    border-radius: 25px;
+}
+
+
+@media (max-width: 1463px) {
+
+    .mainBody{
+        display: block;
+    }
+
+}
+
+
+@media (max-width: 820px) {
+    iframe{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .rooterBody{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .upperAltBody{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 7px;
+        margin: 10px 5px 0 5px;
+    }
+
+
+    .rooterCard .image {
+        height: 350px;
+        width: auto;
+    }
+
+}
+

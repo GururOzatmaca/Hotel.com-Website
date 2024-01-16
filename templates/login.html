@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels.com</title>
+    <link rel="stylesheet" href="../static/loginstyle.css">
+
+
+    
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="navbarLeft">
+                <a href="/"><img src="https://tr.hotels.com/_dms/header/logo.svg?locale=tr_TR&siteid=300000028&2&6f9ec7db" alt=""></a>
+            </div>
+
+
+        </nav>
+    </header>
+
+
+    <form action="/loginned" method="POST">
+    <div class="mainBody">
+        <div class="loginBody">
+
+            <div class="google">
+                <a href="/google-login" target="_blank">Google ile Giriş Yap</a>
+            </div>
+    
+            <div class="mailBody">
+                <div class="mail" name = "mail">
+                    <label for="mail">Kullanici email:</label>
+                    <input id ="mail" type="text" name="mail">
+                </div>
+            </div>
+
+            <div class="passwordBody">
+                <div class="password" name = "password">
+                    <label for="password">Sifre:</label>
+                    <input id="password" type="password" name ="password">
+                </div>
+            </div>
+    
+            <div class="buttons">
+                <button type="submit">Giriş</button>
+                
+                <a href="/register" target="_self">Üye ol</a>
+            </div>
+            
+        </div>
+    </div>
+    </form>
+
+
+</body>
+</html>

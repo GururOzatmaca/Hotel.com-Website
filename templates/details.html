@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/detailsstyle.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="navbarLeft">
+                <a href="/"><img src="https://tr.hotels.com/_dms/header/logo.svg?locale=tr_TR&siteid=300000028&2&6f9ec7db" alt=""></a>
+            </div>
+
+   
+
+        </nav>
+    </header>
+
+
+    <div class="mainContent">
+        <div class="mainBody">
+
+            <div class="leftPart">
+                <div class="hotelName">
+                    {{ hotel_details[6] }}
+                </div>
+                <div class="ratingPointclass">
+                    <span class="ratingPoint">{{ hotel_details[1] }}</span>
+                    <span class="ratingName">{{ hotel_details[2] }}</span>
+                </div>
+
+                <a href="">
+                    <div class="">{{ hotel_details[3] }} Yorumun tümünü göster ></div>
+                </a>
+                <div class="amentities">Popüler konaklama yeri imkan ve özellikleri</div>
+                <div class="amentityList">
+                    <ul>
+                        {% for amenity in hotel_details[13].split(', ') %}
+                        <li>{{ amenity }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="price">
+                    <span class="newPrice">{{ hotel_details[8] }} TL</span>
+                    <span class="oldPrice">{{ hotel_details[9] }} TL</span>
+                </div>                
+                <div class="nightPrice">1 gece için vergiler ve ücretler dahildir</div>
+                
+            </div>
+
+            <div class="rightPart">
+                
+                <div class="map">
+                    {{ google_maps_iframe | safe }}
+                </div>
+
+
+                <div class="adress">{{ hotel_details[6] }} : {{ hotel_details[14] }}, {{ hotel_details[15] }}</div>
+                <a href=""><div class="show">haritada göster ></div></a>
+                
+
+            </div>
+    
+    
+        </div>
+    </div>
+
+
+                        
+
+
+    
+</body>
+</html>

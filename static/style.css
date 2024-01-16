@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.mainContent ,header{
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    height: 150px;
+}
+
+nav{
+    position: relative;
+    top:30%;
+}
+
+.mainContent{
+    height: 100vh;
+}
+
+.navbarLeft{
+    position: relative;
+    float :left;
+    left:1%;
+}
+
+.navbarRight{
+    float: right;
+    font-size: 30px;
+}
+
+.navbarRight a{
+    position: relative;
+    text-decoration: none;
+    color: rgb(139, 23, 91);
+    font-size: 25px;
+    font-family: -apple-system,BlinkMacSystemFont,\.SFNSText-Regular,San Francisco,Roboto,Segoe UI Neue,Lucida Grande,sans-serif;
+
+}
+
+a,p, div{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.upperAltBody{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 0.15fr;
+    gap: 7px;
+    margin: 10px 5px 0 5px;
+}
+
+.upperAltBody input, .upperAltBody select, .upperAltBody button{
+    height: 45px;
+    width: 100%;
+    border : 1px solid;
+}
+
+.upperAltBody input{
+    height: 43px;
+}
+
+.upperAltBody button {
+    color: wheat;
+    background-color: #185883;
+    border-radius: 30px;
+
+}
+
+.altBody{
+    position: relative;
+    width: 96%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    
+
+}
+
+.header2{
+    margin-bottom: 20px;
+}
+
+
+.rooterBody{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.rooterCard{
+    margin-top: 50px;
+    
+}
+
+.rooterCard a{
+    text-decoration: none;
+    color:black;
+}
+
+
+
+.rooterCard img{
+    border-radius: 20px;
+    width: 96%;
+    height: 100%;
+}
+
+.rooterCard .image{
+    height: 350px;
+}
+
+a div {
+    margin-left: 5px;
+    margin-bottom: 8px;
+}
+
+.cardHeader span{
+    font-size: 17px;
+}
+
+.location{
+    font-size: 15px;
+}
+
+.oldPrice{
+    text-decoration: line-through;
+}
+
+.info p{
+    font-size:17px;
+}
+
+.defaultDiscount p{
+    display: inline-block;
+    background-color: red;
+    color: rgba(255, 255, 255, 0.863);
+    font-weight: 100;
+    font-size: 13px;
+    width: 100px;
+    height: 22px;
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 5px;
+}
+
+.memberWarning {
+    background-color: rgb(143, 53, 113);
+    color: rgba(255, 255, 255, 0.863);
+    font-weight: 100;
+    font-size: 15px;
+    width: 245px;
+    height: 22px;
+    padding: 1px 2px 1px 2px;
+    border-radius: 4px;
+}
+
+.memberDiscount button{
+    background-color: white;
+    color: #1c6392;
+    border-radius: 15px;
+    font-size: 18px;
+    height: 40px;
+    width: 250px;
+    margin-top: 25px;
+}
+
+
+
+
+@media (max-width: 1500px) {
+
+    .rooterBody{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .upperAltBody{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) 0.25fr;
+        gap: 7px;
+        margin: 10px 5px 0 5px;
+    }
+
+}
+
+
+@media (max-width: 1000px) {
+
+    .rooterBody{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .upperAltBody{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 7px;
+        margin: 10px 5px 0 5px;
+    }
+
+
+    
+    .rooterCard {
+        margin: auto;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        max-width: 500px;
+    }
+
+
+
+    .rooterCard .image {
+        height: 350px;
+        width: auto;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .rooterBody{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .upperAltBody{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 7px;
+        margin: 10px 5px 0 5px;
+    }
+
+
+    .rooterCard .image {
+        height: 350px;
+        width: auto;
+    }
+
+}
+

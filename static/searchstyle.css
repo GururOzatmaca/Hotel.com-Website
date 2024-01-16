@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f1f1f1d7;
+}
+
+
+.mainContent ,header{
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    height: 150px;
+}
+
+nav{
+    position: relative;
+    top:30%;
+}
+
+.mainContent{
+    height: 100vh;
+}
+
+.navbarLeft{
+    position: relative;
+    float :left;
+    left:1%;
+}
+
+.navbarRight{
+    float: right;
+    font-size: 30px;
+}
+
+.navbarRight a{
+    position: relative;
+    text-decoration: none;
+    color: rgb(139, 23, 91);
+    font-size: 25px;
+    font-family: -apple-system,BlinkMacSystemFont,\.SFNSText-Regular,San Francisco,Roboto,Segoe UI Neue,Lucida Grande,sans-serif;
+
+}
+
+a,p, div{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.upperAltBody{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 0.15fr;
+    gap: 7px;
+    margin: 10px 5px 0 5px;
+}
+
+.upperAltBody input, .upperAltBody select, .upperAltBody button{
+    height: 45px;
+    width: 100%;
+    border : 1px solid;
+}
+
+.upperAltBody input{
+    height: 43px;
+}
+
+.upperAltBody button {
+    color: wheat;
+    background-color: #185883;
+    border-radius: 30px;
+
+}
+
+.altBody{
+    position: relative;
+    width: 96%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    
+
+}
+
+
+
+.cardContainer{
+    height: 100vh;
+}
+
+.card{
+    display: flex;
+    height: 200px;
+    width: 100%;
+    margin: 5px 0 25px 0;
+    background-color: white;
+}
+
+.leftPart img{
+    height: 100%;
+    width: 300px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.rightPart{
+    padding: 10px;
+    width: 100%;
+}
+
+.name{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.location{
+    font-size: 17px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;;
+}
+li{
+    font-size: 14px;
+    float: left;
+    padding-top: 30px;
+    padding-right: 20px;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.cardChildFirst {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.oldPrice, .newPrice{
+    float: right;
+    font-size: 18px;
+    margin-left: 7px;
+}
+
+.oldPrice{
+    text-decoration: line-through;
+}
+
+.point{
+    font-size: 16px;
+}
+
+.perNight {
+    float: right;
+}
+
+.ratingPoint{
+    background-color: #277c1fa6;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+
+    color: white;
+
+}
+
+.cardChildBetween{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 1500px) {
+
+    .rooterBody{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .upperAltBody{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) 0.25fr;
+        gap: 7px;
+        margin: 10px 5px 0 5px;
+    }
+
+}
+
+
+
+@media (max-width: 1200px) {
+
+    .rooterBody{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .upperAltBody{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 7px;
+        margin: 10px 5px 0 5px;
+    }
+
+    .leftPart img {
+        height: 100%;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        width: 100%;
+        min-width: 300px;
+    }
+
+
+    
+    .rooterCard {
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    .rooterCard .image {
+        height: 350px;
+        width: auto;
+    }
+}
+
+
+@media (max-width: 865px) {
+
+    .rooterBody{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .upperAltBody{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 7px;
+        margin: 10px 5px 0 5px;
+    }
+
+    .card {
+        display: inline-block;
+        height: 400px;
+        width: 100%;
+        margin: 5px 0px 50px 0p;
+        background-color: white;
+    }
+    
+    .rooterCard {
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    .rooterCard .image {
+        height: 350px;
+        width: auto;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .rooterBody{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .upperAltBody{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 7px;
+        margin: 10px 5px 0 5px;
+    }
+
+    .leftPart img {
+        width: 100%;
+        height: 100%;
+        min-height: 170px;
+    }
+
+
+    .rooterCard .image {
+        height: 350px;
+        width: auto;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .rooterBody{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .upperAltBody{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 7px;
+        margin: 10px 5px 0 5px;
+    }
+
+    .leftPart img {
+        width: 100%;
+        height: 100%;
+        min-height: 100px;
+    }
+    .card{
+        margin-bottom: 20px;
+    }
+
+
+    .rooterCard .image {
+        height: 350px;
+        width: auto;
+    }
+
+}

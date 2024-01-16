@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels.com</title>
+    <link rel="stylesheet" href="../static/registerstyle.css">
+
+
+    
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="navbarLeft">
+                <a href="/"><img src="https://tr.hotels.com/_dms/header/logo.svg?locale=tr_TR&siteid=300000028&2&6f9ec7db" alt=""></a>
+            </div>
+
+
+        </nav>
+    </header>
+
+    
+
+
+    <form action="/login" method="POST">
+        <div class="mainBody">
+            <div class="loginBody">
+        
+                <div class="nameBody">
+                    <div class="name">
+                        <label for="name">Ad:</label>
+                        <input id ="name" type="text" name="name">
+                    </div>
+                </div>
+
+                <div class="surnameBody">
+                    <div class="surname">
+                        <label for="surname">Soyad:</label>
+                        <input id ="surname" type="text" name="surname">
+                    </div>
+                </div>
+    
+                <div class="mailBody">
+                    <div class="mail">
+                        <label for="mail">Kullanici email:</label>
+                        <input id ="mail" type="text" name="mail">
+                    </div>
+                </div>
+
+                <div class="passwordBody">
+                    <div class="password">
+                        <label for="password">Sifre:</label>
+                        <input type="password" id="password" type="text" name="password">
+                    </div>
+                </div>
+
+                <div class="againpasswordBody">
+                    <div class="againpassword">
+                        <label for="againpassword">Tekrar:</label>
+                        <input type="password" id="againpassword" type="text" name="againpassword">
+                    </div>
+                </div>
+
+                
+                
+                <div class="countryBody">
+                    <div class="country">
+                        <label for="country">Ülke:</label>
+                        <select id="country" name="country">
+                            <option value="istanbul">Türkiye</option>
+                        </select>
+                    </div>
+                </div>
+
+                             
+                <div class="cityBody">
+                    <div class="city">
+                        <label for="city">Şehir:</label>
+                        <select id="city" name="city">
+                            {% for city in cities %}
+                                <option value="{{ city.lower() }}">{{ city }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+        
+
+                <div class="buttons">
+                    <button type="submit">Kayıt Ol</button>
+                </div>
+
+     
+            </div>
+
+
+
+
+        </div>
+    </form>
+
+
+</body>
+</html>

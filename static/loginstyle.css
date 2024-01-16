@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.mainContent ,header{
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    height: 150px;
+}
+
+nav{
+    position: relative;
+    top:30%;
+}
+
+.mainContent{
+    height: 100vh;
+}
+
+.navbarLeft{
+    position: relative;
+    float :left;
+    left:1%;
+}
+
+.navbarRight{
+    float: right;
+    font-size: 30px;
+}
+
+.navbarRight a{
+    position: relative;
+    text-decoration: none;
+    color: rgb(139, 23, 91);
+    font-size: 25px;
+    font-family: -apple-system,BlinkMacSystemFont,\.SFNSText-Regular,San Francisco,Roboto,Segoe UI Neue,Lucida Grande,sans-serif;
+
+}
+
+a,p, div{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.mainBody{
+    height: 100vh;
+    width: 80%;
+    margin: auto;
+}
+
+.mainBody a {
+    background-color: rgb(21, 133, 133);
+    text-decoration: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 35px;
+    color: white;
+    border:none;
+    display: inline-block;
+}
+
+.loginBody{
+    display: grid;
+    gap: 20px;
+    padding: 10px;
+}
+
+.loginBody div{
+    text-align: left;
+}
+
+.loginBody input{
+    height: 25px;
+}
+
+.mainBody label{
+    display: inline-block;
+    min-width: 140px;
+}
+
+.google{
+    justify-content: center;
+}
+
+.buttons button{
+    background-color: rgb(21, 133, 133);
+    text-decoration: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 35px;
+    color: white;
+    border:none;
+    display: inline-block;
+    float: left;
+    margin-right: 1%;
+}
+
+
+.mainBody a {
+    background-color: rgb(21, 133, 133);
+    text-decoration: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 35px;
+    color: white;
+    border:none;
+    display: inline-block;
+    font-size: 15px;
+    float: left;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+
+@media (max-width: 420px) {
+
+        .mainBody a {
+            background-color: rgb(21, 133, 133);
+            text-decoration: none;
+            border-radius: 5px;
+            width: 150px;
+            height: 35px;
+            color: white;
+            border:none;
+            display: inline-block;
+            font-size: 15px;
+            float: left;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1%;
+            
+        }
+    
+
+}

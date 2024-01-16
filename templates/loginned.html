@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="navbarLeft">
+                <a href="/loginned"><img src="https://tr.hotels.com/_dms/header/logo.svg?locale=tr_TR&siteid=300000028&2&6f9ec7db" alt=""></a>
+            </div>
+
+            <div class="navbarRight">
+                <p>Hoşgeldiniz, {{username}}</p>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="mainContent">
+        <div class="mainBody">
+
+            <div class="upperBody">
+                <div class="header"><h1>Nereye?</h1></div>
+                <form action="/search" method="post">
+                    <div class="upperAltBody">
+                        <div class="dropdownBox cityBox">
+                            <select name="city"  id="city"  required>
+                                <option value="" disabled selected>Varış noktası</option>
+                                {% for city in cities %}
+                                    <option value="{{ city }}">{{ city }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="dropdownBox dateBox">
+                            <input type="text" name="daterange" value="01/01/2024 - 01/03/2024" />
+                            <script>
+                                $(function () { 
+                                    $('input[name="daterange"]').daterangepicker({
+                                        opens: 'left'
+                                    }, function (start, end, label) {
+                                        console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+                                    });
+                                });
+                            </script>
+                        </div>
+                        <div class="dropdownBox guestBox">
+                            <select name="guest_count">
+                                <option value="" disabled selected>Misafir Sayısı</option>
+                                {% for option in guest_count_options %}
+                                    <option value="{{ option }}">{{ option }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="searchButton"><button type="submit" class="btn btn-info">Ara</button></div>
+                        
+                    </div>
+                </form>
+            </div>
+    
+            <div class="altBody">
+                <div class="header2"><p><b>Bu hafta sonu tatil yapın!</b></p></div>
+                <div class="header3"><p>Şu tarih aralığı için fırsatlar gösteriliyor <b>{{ next_weekend }}</b></p></div>
+            </div>
+
+            <div class="rooterBody">
+
+
+
+
+
+
+
+
+
+
+                {% for hotel in hotels %}
+                <div class="rooterCard">
+                    <a href="/details/{{ hotel[6] }}">
+                        <div class="image">
+                            <img src="{{ hotel[0] }}" alt="">
+                        </div>
+                        <div class="cardHeader">
+                            <span> <strong>{{ hotel[1] }}/10</strong></span>
+                            <span>{{ hotel[2] }}</span>
+                            <span>({{ hotel[3] }} Yorum)</span>
+                        </div>
+                        <div class="cardName">
+                            <p>{{ hotel[6] }} {{ hotel[7] }} </p>
+                        </div>
+                        <div class="location">
+                            {{ hotel[7] }}
+                        </div>
+                        <div class="prices">
+                            <span class="newPrice">{{ hotel[8] }} TL</span>
+                            <span class="oldPrice"> {{ hotel[9] }} TL</span>
+                        </div>
+                        <div class="info">
+                            <p>1 gece için</p>
+                            <p>Gecelik {{ hotel[8] }} TL</p>
+                            <p>vergiler ve ücretler dahildir</p>
+                        </div>
+                    </a>
+                    <div class="discount">
+
+                        {% if hotel[11] == 'False' %}
+
+                        <div class="memberDiscount">
+                            <p class="memberWarning">🏷️ Üye Fiyatından yararlanılabilir</p>
+                            <p> Üye fiyatı : {{discountedPrice[loop.index - 1]}} </p>
+                        </div>
+
+                        {% else %}
+                        <div class="defaultDiscount">
+                            <p>{{hotel[11]}} indirim</p>
+                        </div>
+
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+    
+    
+        </div>
+    </div>
+
+
+
+    
+</body>
+</html>
